@@ -12,6 +12,13 @@
 </head>
 
 <body>
+<div id="navbar">
+  <a href="index.html">DeepBook</a>
+  <a href="javascript:void(0)">About Us</a>
+  <a href="javascript:void(0)">Contact</a>
+	<a  class="active" href="javascript:void(0)">Login</a>
+	<a href="rejestracja.html">Register</a>
+</div>
 
 	<div id="container">
 		<form>
@@ -24,6 +31,19 @@
 			
 		</form>
 	</div>
-	
+	<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>

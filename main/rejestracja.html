@@ -12,22 +12,44 @@
 </head>
 
 <body>
+<div id="navbar">
+  <a  href="index.html" >DeepBook</a>
+  <a href="javascript:void(0)">About Us</a>
+  <a href="javascript:void(0)">Contact</a>
+	<a href="logowanie.html">Login</a>
+	<a class="active" href="javascript:void(0)">Register</a>
+</div>
 
 	<div id="container">
 		<form>
+			<input type="password" placeholder="Imie" onfocus="this.placeholder=''" onblur="this.placeholder='Imie'" >
+			
+			<input type="password" placeholder="Nazwisko" onfocus="this.placeholder=''" onblur="this.placeholder='Nazwisko'" >
 			
 			<input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'" >
 			
 			<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" >
 			
-			<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='email'" >
+			<input type="password" placeholder="email" onfocus="this.placeholder=''" onblur="this.placeholder='email'" >
 			
-			<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Imie i Nazwisko'" >
 			
 			<input type="submit" value="Zarejestruj">
 			
 		</form>
 	</div>
-	
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>	
 </body>
 </html>
