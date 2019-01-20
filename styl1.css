@@ -112,7 +112,14 @@ input:focus:-ms-input-placeholder
   text-align: center;
   background-image: url('images/DeepBook-logo.png');
   background-repeat: no-repeat;
-  margin-top: 100px;
+  background-size: 219px 114px;
+  background-position: 50% 30px;
+  padding-top: 100px;
+}
+
+.header p {
+    margin-top: 35px;
+    margin-bottom: 0;
 }
 
 #navbar {
