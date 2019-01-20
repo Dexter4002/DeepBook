@@ -118,7 +118,10 @@ input:focus:-ms-input-placeholder {
     padding-top: 100px;
 }
 
-.header h2,
+.header h2 {
+    display: none;
+}
+
 p {
     margin-top: 35px;
     margin-bottom: 0;
