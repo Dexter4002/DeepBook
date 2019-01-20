@@ -1,0 +1,463 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+}
+
+#container {
+
+    width: 300px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+}
+
+input[type=text],
+input[type=password] {
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 10px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+    border: 2px solid #a5cda5;
+    background-color: #e9f3e9;
+    color: #428c42;
+}
+
+input[type=submit] {
+    width: 300px;
+    background-color: #36b03c;
+    font-size: 20px;
+    color: white;
+    padding: 15px 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+input[type=submit]:focus {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+}
+
+input[type=submit]:hover {
+    background-color: #37b93d;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #428C42;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #999;
+}
+
+input:focus:-moz-placeholder {
+    color: #428C42;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #999;
+}
+
+input:focus::-moz-placeholder {
+    color: #428C42;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #999;
+}
+
+input:focus:-ms-input-placeholder {
+    color: #428C42;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h2,
+p {
+    margin-bottom: 15px;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h3 {
+    margin-top: 20px;
+}
+
+.content p {
+    margin-top: 20px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ECF0F1;
+    display: none;
+}
+
+.load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.load hr {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite;
+}
+
+.load :first-child {
+    background: #19A68C;
+    animation-delay: -1.5s;
+}
+
+.load :nth-child(2) {
+    background: #F63D3A;
+    animation-delay: -1s;
+}
+
+.load :nth-child(3) {
+    background: #FDA543;
+    animation-delay: -0.5s;
+}
+
+.load :last-child {
+    background: #193B48;
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        transform: translate(0)
+    }
+
+    25% {
+        transform: translate(160%)
+    }
+
+    50% {
+        transform: translate(160%, 160%)
+    }
+
+    75% {
+        transform: translate(0, 160%)
+    }
+}
+
+.js .load,
+.js #loader-wrapper {
+    display: block;
+
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #container {
+
+        width: 300px;
+        padding: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+        -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+        box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 300px;
+        background-color: #efefef;
+        color: #666;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        outline: none;
+        margin-top: 10px;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+        -webkit-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+        -moz-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+        box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+        border: 2px solid #a5cda5;
+        background-color: #e9f3e9;
+        color: #428c42;
+    }
+
+    input[type=submit] {
+        width: 300px;
+        background-color: #36b03c;
+        font-size: 20px;
+        color: white;
+        padding: 15px 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        letter-spacing: 2px;
+        outline: none;
+    }
+
+    input[type=submit]:focus {
+        -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+        -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+        box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    }
+
+    input[type=submit]:hover {
+        background-color: #37b93d;
+    }
+
+    input::-webkit-input-placeholder {
+        color: #999;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        color: #428C42;
+    }
+
+    /* Firefox < 19 */
+    input:-moz-placeholder {
+        color: #999;
+    }
+
+    input:focus:-moz-placeholder {
+        color: #428C42;
+    }
+
+    /* Firefox > 19 */
+    input::-moz-placeholder {
+        color: #999;
+    }
+
+    input:focus::-moz-placeholder {
+        color: #428C42;
+    }
+
+    /* Internet Explorer 10 */
+    input:-ms-input-placeholder {
+        color: #999;
+    }
+
+    input:focus:-ms-input-placeholder {
+        color: #428C42;
+    }
+
+    .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+    }
+
+    #navbar {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    #navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    #navbar a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .sticky+.content {
+        padding-top: 60px;
+    }
+
+    #loader-wrapper {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: #ECF0F1;
+        display: none;
+    }
+
+    .load {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        display: none;
+    }
+
+    .load hr {
+        border: 0;
+        margin: 0;
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        border-radius: 50%;
+        animation: spin 2s ease infinite;
+    }
+
+    .load :first-child {
+        background: #19A68C;
+        animation-delay: -1.5s;
+    }
+
+    .load :nth-child(2) {
+        background: #F63D3A;
+        animation-delay: -1s;
+    }
+
+    .load :nth-child(3) {
+        background: #FDA543;
+        animation-delay: -0.5s;
+    }
+
+    .load :last-child {
+        background: #193B48;
+    }
+
+    @keyframes spin {
+
+        0%,
+        100% {
+            transform: translate(0)
+        }
+
+        25% {
+            transform: translate(160%)
+        }
+
+        50% {
+            transform: translate(160%, 160%)
+        }
+
+        75% {
+            transform: translate(0, 160%)
+        }
+    }
+
+    .js .load,
+    .js #loader-wrapper {
+        display: block;
+    }
