@@ -107,15 +107,100 @@ input:focus:-ms-input-placeholder {
     color: #428C42;
 }
 
+.square {
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+    /* background-color: black */
+    perspective: 300px;
+
+}
+
+#rodzic {
+    margin-top: 5vh;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* transform: rotateX(195deg); */
+    transform-style: preserve-3d;
+    animation: obrot 8s linear infinite;
+
+}
+
+#rodzic>div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(ellipse at center, rgba(60, 0, 255, 0.8), rgba(0, 0, 0, 0.8));
+    box-shadow: 0 0 4px #00F;
+
+}
+
+#przod {
+    transform: translateZ(7.5vh);
+
+}
+
+#tyl {
+    transform: translateZ(-7.5vh);
+
+}
+
+#lewo {
+    transform: rotateY(-90deg) translateZ(7.5vh);
+
+}
+
+#prawo {
+    transform: rotateY(90deg) translateZ(7.5vh);
+}
+
+#gora {
+    transform: rotateX(90deg) translateZ(7.5vh);
+
+}
+
+#dol {
+    transform: rotateX(-90deg) translateZ(7.5vh);
+
+}
+
+img {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 5; */
+}
+
+#tyl>img {
+    transform: rotateY(180deg) translate(50%, -50%);
+}
+
+@keyframes obrot {
+    0% {
+        transform: rotateX(0) rotateZ(0)
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateZ(360deg)
+    }
+}
+
+
 .header {
     background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    background-image: url('images/DeepBook-logo.png');
-    background-repeat: no-repeat;
-    background-size: 219px 114px;
-    background-position: 50% 30px;
-    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    /* padding: 30px; */
+    /* text-align: center; */
+    /* background-image: url('images/DeepBook-logo.png'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: 219px 114px; */
+    /* background-position: 50% 30px; */
+    padding-top: 40px;
 }
 
 .header h2 {
