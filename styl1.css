@@ -12,6 +12,9 @@ body {
     width: 100vw;
 }
 
+
+
+
 #container {
 
     width: 300px;
@@ -23,6 +26,7 @@ body {
     -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
     box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
 }
+
 
 input[type=text],
 input[type=password] {
@@ -151,6 +155,122 @@ p {
     background-color: #4CAF50;
     color: white;
 }
+
+/* POCZĄTEK ROBIENIA  */
+.menu-wrapper {
+    display: flex;
+}
+
+.menu {
+    box-sizing: border-box;
+    height: calc(100vh - 48px - 197px);
+    width: 25vw;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid white;
+
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 5vh;
+    width: 100%;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.square {
+    height: 5vh;
+    width: 5vh;
+    /* background-color: black */
+    perspective: 300px;
+
+}
+
+#rodzic {
+    margin-top: 45vh;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* transform: rotateX(195deg); */
+    transform-style: preserve-3d;
+    animation: obrot 5s linear infinite;
+
+}
+
+#rodzic>div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(ellipse at center, rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0.8));
+    box-shadow: 0 0 4px #00F;
+
+}
+
+#przod {
+    transform: translateZ(2.5vh);
+
+}
+
+#tyl {
+    transform: translateZ(-2.5vh);
+
+}
+
+#lewo {
+    transform: rotateY(-90deg) translateZ(2.5vh);
+
+}
+
+#prawo {
+    transform: rotateY(90deg) translateZ(2.5vh);
+}
+
+#gora {
+    transform: rotateX(90deg) translateZ(2.5vh);
+
+}
+
+#dol {
+    transform: rotateX(-90deg) translateZ(2.5vh);
+
+}
+
+img {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 5; */
+}
+
+#tyl>img {
+    transform: rotateY(180deg) translate(50%, -50%);
+}
+
+@keyframes obrot {
+    0% {
+        transform: rotateX(0) rotateZ(0)
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateZ(360deg)
+    }
+}
+
+/* tutaj koniec robienia  */
 
 .content {
     padding: 20px;

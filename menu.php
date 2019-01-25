@@ -28,6 +28,7 @@
       <hr />
     </div>
   </div>
+  
   <div class="header">
     <h2>DeepBook</h2>
     <p>The opensource project</p>
@@ -41,8 +42,35 @@
     <a href="rejestracja.php">Register</a>
   </div>
 
+  <div class="menu-wrapper">
+<div class ="menu">
+  <a href="">My files</a>
+  <a href="">Upload files</a>
+  <a href="">Help</a>
+
+  <div class="square">
+                        <div id="rodzic">
+                            <div id="przod">
+                                <img class="github" src="images/DeepBook-logo.png" alt="">
+                            </div>
+                            <div id="tyl">
+                                <img src="images/DeepBook-logo.png" alt="">
+
+                            </div>
+                            <div id="lewo">
+                                <img class="html" src="images/DeepBook-logo.png" alt="">
+                            </div>
+                            <div id="prawo"><img src="images/DeepBook-logo.png" alt=""></div>
+                            <div id="gora"> <img src="images/DeepBook-logo.png" alt=""></div>
+                            <div id="dol"> <img src="images/DeepBook-logo.png" alt=""> </div>
+                        </div>
+                    </div>
+</div>
   <div class="content">
     <h3>DeepBook-Panel</h3>
+    </div>
+    
+    
 <!--
 
 Tu
