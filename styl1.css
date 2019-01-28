@@ -10,6 +10,7 @@ body {
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
     width: 100vw;
+    background-image: url("images/bluecloudes.png");
 }
 
 #container {
@@ -27,7 +28,7 @@ body {
 input[type=text],
 input[type=password] {
     width: 300px;
-    background-color: #efefef;
+    background-image: image("Bluecloudes.png");
     color: #666;
     border: 2px solid #ddd;
     border-radius: 5px;
